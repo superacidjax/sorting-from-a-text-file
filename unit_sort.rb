@@ -15,7 +15,6 @@ class UnitSort
     file.readlines.sort_by { |x| x[/\d+/].to_i }
   end
 
-
   # this handles situations such as #1A #1B etc.
   def sort_by_unit_letter(results)
     n = results.length
@@ -33,5 +32,6 @@ class UnitSort
     end
     results
   end
-
 end
+
+puts UnitSort.new(*ARGV).results
